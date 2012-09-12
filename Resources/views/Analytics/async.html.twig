@@ -29,7 +29,7 @@ if ( _gaq == null || typeof(_gaq) != 'array') { var _gaq = window._gaq = []; }
 {% for key, tracker in google_analytics.trackers %}
     _gaq.push(['{{ google_analytics.trackerName(key) }}_setAccount', '{{ tracker.accountId }}']);
 
-    {% if tracker.domain %}
+    {% if tracker.domain is defined %}
         _gaq.push(['{{ google_analytics.trackerName(key) }}_setDomainName', '{{ tracker.domain }}']);
 
         {% if google_analytics.getAllowAnchor(key) %}
