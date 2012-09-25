@@ -1,2 +1,3 @@
 Tests/testkernel/cache/*
 phpunit.xml
+vendor/

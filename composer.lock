@@ -1,0 +1,25 @@
+{
+    "hash": "f70f40395a89ac98775e3834010f6b3b",
+    "packages": [
+        {
+            "package": "doctrine/common",
+            "version": "2.2.3"
+        },
+        {
+            "package": "symfony/symfony",
+            "version": "v2.1.1"
+        },
+        {
+            "package": "twig/twig",
+            "version": "v1.9.2"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ]
+}
