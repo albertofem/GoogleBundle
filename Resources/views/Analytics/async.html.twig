@@ -27,6 +27,7 @@ AntiMattr.GoogleAnalytics.notifyEvent = function(tracker, category, action, labe
 if ( _gaq == null || typeof(_gaq) != 'array') { var _gaq = window._gaq = []; }
 
 {% for key, tracker in google_analytics.trackers %}
+{% if tracker.accountId is defined and tracker.accountId is not null %}
     _gaq.push(['{{ google_analytics.trackerName(key) }}_setAccount', '{{ tracker.accountId }}']);
 
     {% if tracker.domain is defined %}
@@ -121,7 +122,7 @@ if ( _gaq == null || typeof(_gaq) != 'array') { var _gaq = window._gaq = []; }
         {% endfor %}
         });
     {% endif %}
-
+{% endif %}
 {% endfor %}
 
 (function() {
