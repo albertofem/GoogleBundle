@@ -54,14 +54,14 @@ class Analytics
         return true;
     }
 
-    private function setTrackerProperty($tracker, $property, $value)
+    public function setTrackerProperty($tracker, $property, $value)
     {
         if ($this->isValidConfigKey($tracker)) {
             $this->trackers[$tracker][$property] = $value;
         }
     }
 
-    private function getTrackerProperty($tracker, $property)
+    public function getTrackerProperty($tracker, $property)
     {
         if (!$this->isValidConfigKey($tracker)) {
             return;
