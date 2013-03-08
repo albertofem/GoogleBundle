@@ -34,6 +34,13 @@ class Analytics
         $this->api_key = isset($dashboard['api_key']) ? $dashboard['api_key'] : '';
         $this->client_id = isset($dashboard['client_id']) ? $dashboard['client_id'] : '';
         $this->table_id = isset($dashboard['table_id']) ? $dashboard['table_id'] : '';
+
+		// TODO: move this to proper Configuration class
+		foreach($this->trackers as $tracker)
+		{
+			if(!isset($tracker['customVariables']))
+				$tracker['customVariables'];
+		}
     }
 
     public function excludeBaseUrl()
