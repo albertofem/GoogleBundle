@@ -39,7 +39,7 @@ class Analytics
 		foreach($this->trackers as $tracker)
 		{
 			if(!isset($tracker['customVariables']))
-				$tracker['customVariables'];
+				$tracker['customVariables'] = true;
 		}
     }
 
